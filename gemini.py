@@ -49,9 +49,8 @@ safety_settings = [
   },
 ]
 
-Model = os.getenv("MODEL")
-model = genai.GenerativeModel(Model,
-                              generation_config=generation_config,
+
+model = genai.GenerativeModel(model_name="gemini-pro-vision",
                               safety_settings=safety_settings)
 
 response = requests.get("https://fleastore.in/gem/img.png")
